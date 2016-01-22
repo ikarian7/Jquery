@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<title>jQuery opdracht4</title>
+</head>
+<h1></h1>
+<body>
+<script>
+//Javascript zoekt zelf uit wat het type is, dus je hoeft niet te declareren.
+$(document).ready(function(){
+var x = 5;
+var text = "mijntekst";
+    $("button").click(function(){
+    	 x = $("#textfield").val();
+    if (x < 1 || x > 10) { 
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+    $("p").html(text);
+    });
+});
+</script>
+<button>Ok</button>
+<p></p>
+<input type="text" id="textfield">
+</body>
+</html>
